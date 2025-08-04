@@ -1,0 +1,7 @@
+main(){
+  if(Cond){
+
+  }else{
+
+  }
+}
