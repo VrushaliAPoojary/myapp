@@ -25,5 +25,63 @@ bin/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
+### macOS ###
 .DS_Store
+
+### Windows ###
+Thumbs.db
+
+### Flutter & Dart ###
+.dart_tool/
+.packages
+.pub-cache/
+.buildlog/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.melos_tool/
+generated_plugin_registrant.dart
+
+### Android ###
+android/.gradle/
+android/app/build/
+android/local.properties
+android/key.properties
+*.jks
+*.keystore
+
+### iOS ###
+ios/Pods/
+ios/Runner.xcworkspace/
+ios/.symlinks/
+ios/.flutter-plugins
+ios/.flutter-plugins-dependencies
+ios/Flutter/Generated.xcconfig
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/build/
+Podfile.lock
+
+### Web ###
+web/.dart_tool/
+web/build/
+
+### Linux ###
+linux/build/
+
+### Windows (Flutter Desktop) ###
+windows/build/
+windows/Runner/GeneratedPluginRegistrant.*
+
+### macOS (Flutter Desktop) ###
+macos/build/
+
+### Firebase ###
+*.firebase/
+firebase-debug.log
+
+### Others ###
+.env
+.env.*
+coverage/
