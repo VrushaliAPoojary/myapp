@@ -50,7 +50,12 @@ class _MyHomePageState extends State<MyHomePage> {
           width: 100,
           height: 100,
           color: Colors.amber,
-          child: Text("hello world"),
+          child: Center(
+            child: Text(
+              "hello world",
+              style: TextStyle(fontSize: 25),
+            ),
+          ),
         )));
   }
 }
