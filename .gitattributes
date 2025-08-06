@@ -1,0 +1,54 @@
+# === FLUTTER / DART PROJECT GITATTRIBUTES ===
+
+# Normalize all text files to use LF in the repository
+* text=auto
+
+# Dart source files
+*.dart text eol=lf
+
+# Flutter project files
+*.yaml text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.xml text eol=lf
+*.gradle text eol=lf
+*.kt text eol=lf
+*.java text eol=lf
+*.swift text eol=lf
+*.m text eol=lf
+*.mm text eol=lf
+
+# Scripts
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+
+# Git configuration files
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# Windows-specific (CRLF endings preferred)
+*.cmd text eol=crlf
+
+# Prevent generated binary files from being treated as text
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.jar binary
+*.zip binary
+*.gz binary
+*.mp4 binary
+*.ttf binary
+*.otf binary
+
+# Flutter-specific generated plugin registrants - just to be sure
+linux/flutter/generated_plugin_registrant.* text eol=lf
+macos/Flutter/GeneratedPluginRegistrant.* text eol=lf
+windows/flutter/generated_plugin_registrant.* text eol=lf
+
