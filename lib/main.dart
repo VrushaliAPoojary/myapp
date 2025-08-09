@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
           color: Colors.amber,
           child: Center(
             child: Text(
-              "hello world",
+              "welcome",
               style: TextStyle(fontSize: 25),
             ),
           ),
