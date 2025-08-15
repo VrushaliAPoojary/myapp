@@ -45,10 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: ElevatedButton(
-          child: Text("click"),
+        body: OutlinedButton(
+          child: Text('please clickkk'),
           onPressed: () {
-            print("HII GUYS WASSUP!!!");
+            print("haiii");
           },
         ));
   }
