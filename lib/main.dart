@@ -45,11 +45,6 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: OutlinedButton(
-          child: Text('please clickkk'),
-          onPressed: () {
-            print("haiii");
-          },
-        ));
+        body: Image.asset('assets / images/img.jpg'));
   }
 }
