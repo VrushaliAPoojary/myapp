@@ -45,17 +45,6 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Center(
-            child: Container(
-          width: 100,
-          height: 100,
-          color: Colors.amber,
-          child: Center(
-            child: Text(
-              "welcome",
-              style: TextStyle(fontSize: 25),
-            ),
-          ),
-        )));
+        body: Text("hello"));
   }
 }
