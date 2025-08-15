@@ -45,6 +45,11 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Image.asset('assets / images/img.png'));
+        body: Center(
+            child: Container(
+          width: 900,
+          height: 900,
+          child: Image.asset('assets/images/img.png'),
+        )));
   }
 }
