@@ -45,6 +45,6 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: Image.asset('assets / images/img.jpg'));
+        body: Image.asset('assets / images/img.png'));
   }
 }
