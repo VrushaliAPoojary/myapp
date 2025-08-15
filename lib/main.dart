@@ -45,13 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
-        body: TextButton(
-          child: Text('Click here'),
+        body: ElevatedButton(
+          child: Text("click"),
           onPressed: () {
-            print("HII DUDE WASSUP!!!!!!!!!!");
-          },
-          onLongPress: () {
-            print("longpress");
+            print("HII GUYS WASSUP!!!");
           },
         ));
   }
