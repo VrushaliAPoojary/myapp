@@ -38,16 +38,42 @@ class _MyHomePageState extends State<MyHomePage> {
     var arrNames = ['appu', 'sonu'];
     return Scaffold(
         appBar: AppBar(title: Text(widget.title)),
-        body: ListView.builder(
+        body: ListView.separated(
           itemBuilder: (context, index) {
-            return Text(
-              arrNames[index],
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900),
+            return Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        arrNames[index],
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        arrNames[index],
+                        style: TextStyle(
+                            fontSize: 30, fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+                )
+              ],
             );
           },
           itemCount: arrNames.length,
-          itemExtent: 100,
           scrollDirection: Axis.horizontal,
+          separatorBuilder: (context, index) {
+            return Divider(height: 100, thickness: 2);
+          },
         ));
   }
 }
