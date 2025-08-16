@@ -36,30 +36,81 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
-      body: Center(
-        child: InkWell(
-          onTap: () {
-            print("you tapped");
-          },
-          onLongPress: () {
-            print("you longpressed");
-          },
-          onDoubleTap: () {
-            print("you doubletapped");
-          },
-          child: Container(
-            width: 300,
-            height: 300,
-            color: Colors.amber,
-            child: Center(
-                child: Text(
-              "click",
-              style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-            )),
+        appBar: AppBar(title: Text(widget.title)),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.pink,
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.black,
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.pink,
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.black,
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.pink,
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.black,
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.pink,
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.black,
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.pink,
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.black,
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 11),
+                  height: 200,
+                  width: 200,
+                  color: Colors.pink,
+                ),
+              ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
