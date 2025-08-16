@@ -31,46 +31,29 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() => _counter++);
-  }
+  // Removed _counter and _incrementCounter since they were unused
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          // Row of letters with button
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
-              Text('A', style: TextStyle(fontSize: 25)),
-              Text('B', style: TextStyle(fontSize: 28)),
-              Text('C', style: TextStyle(fontSize: 28)),
-              Text('D', style: TextStyle(fontSize: 28)),
-            ],
+      body: Center(
+        child: InkWell(
+          onTap: () {
+            print("you tapped");
+          },
+          onLongPress: () {
+            print("you longpressed");
+          },
+          onDoubleTap: () {
+            print("you doubletapped");
+          },
+          child: Container(
+            width: 300,
+            height: 300,
+            color: Colors.amber,
           ),
-          ElevatedButton(
-            onPressed: _incrementCounter,
-            child: const Text('Click'),
-          ),
-
-          // Column of letters with button
-          const Text('A', style: TextStyle(fontSize: 25)),
-          Text('Counter: $_counter', style: const TextStyle(fontSize: 20)),
-          const Text('B', style: TextStyle(fontSize: 28)),
-          const Text('C', style: TextStyle(fontSize: 28)),
-          const Text('D', style: TextStyle(fontSize: 28)),
-          ElevatedButton(
-            onPressed: _incrementCounter,
-            child: const Text('Click'),
-          ),
-        ],
+        ),
       ),
     );
   }
