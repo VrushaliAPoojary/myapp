@@ -46,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Text(
               'hii',
@@ -54,6 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Text('hii'),
             Text('hii'),
             Text('hii'),
+            ElevatedButton(onPressed: () {}, child: Text('click'))
           ],
         ));
   }
