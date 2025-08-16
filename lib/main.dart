@@ -37,119 +37,52 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text(widget.title)),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 11),
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(children: [
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.pink,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.black,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.pink,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.black,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.pink,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.black,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.pink,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.black,
-                      ),
-                    ]),
-                  ),
+        body: Center(
+          child: ListView(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'One',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-                  color: Colors.black,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Two',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-                  color: Colors.pink,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Three',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-                  color: Colors.black,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Four',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-                  color: Colors.pink,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Five',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-                  color: Colors.black,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Six',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-                  color: Colors.pink,
-                ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-                  color: Colors.black,
-                ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-                  color: Colors.pink,
-                ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-                  color: Colors.black,
-                ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-                  color: Colors.pink,
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ));
   }
