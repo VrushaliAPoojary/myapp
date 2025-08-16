@@ -31,49 +31,52 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  // Removed _counter and _incrementCounter since they were unused
-
   @override
   Widget build(BuildContext context) {
     var arrNames = ['appu', 'sonu'];
     return Scaffold(
-        appBar: AppBar(title: Text(widget.title)),
-        body: ListView.separated(
-          itemBuilder: (context, index) {
-            return Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        arrNames[index],
-                        style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.w600),
-                      ),
-                    ],
-                  ),
+      appBar: AppBar(title: Text(widget.title)),
+      body: ListView.separated(
+        scrollDirection: Axis.horizontal, // horizontal scroll
+        itemBuilder: (context, index) {
+          return Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Text(
+                      arrNames[index],
+                      style: const TextStyle(
+                          fontSize: 30, fontWeight: FontWeight.w600),
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        arrNames[index],
-                        style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.w600),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            );
-          },
-          itemCount: arrNames.length,
-          scrollDirection: Axis.horizontal,
-          separatorBuilder: (context, index) {
-            return Divider(height: 100, thickness: 2);
-          },
-        ));
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Text(
+                      arrNames[index],
+                      style: const TextStyle(
+                          fontSize: 30, fontWeight: FontWeight.w600),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          );
+        },
+        itemCount: arrNames.length,
+        separatorBuilder: (context, index) {
+          return const VerticalDivider(
+            width: 50,
+            thickness: 2,
+            color: Colors.black,
+          );
+        },
+      ),
+    );
   }
 }
