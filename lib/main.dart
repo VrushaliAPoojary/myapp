@@ -1,59 +1,95 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(learnflutter());
+  runApp(const LearnFlutter());
 }
 
-class learnflutter extends StatelessWidget {
+class LearnFlutter extends StatelessWidget {
+  const LearnFlutter({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "flutter",
+      title: "Flutter",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: DashBoardScreen(),
+      home: const DashBoardScreen(),
     );
   }
 }
 
 class DashBoardScreen extends StatelessWidget {
+  const DashBoardScreen({super.key});
+
+  Widget buildBlueBox() {
+    return Container(
+      width: 10,
+      height: 10,
+      margin: const EdgeInsets.all(2),
+      decoration: const BoxDecoration(
+        color: Colors.blue,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(5),
+          bottomRight: Radius.circular(5),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Dashboard"),
-        ),
-        body: Container(
-          color: Colors.pink,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                              width: 50,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                  color: Colors.blue,
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(30)))),
-                        ],
-                      ),
-                    ],
+      appBar: AppBar(title: const Text("Dashboard")),
+      body: Container(
+        color: Colors.pink,
+        child: Column(
+          children: [
+            // 🔵 Top border row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: List.generate(30, (index) => buildBlueBox()),
+            ),
+
+            Expanded(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  // 🔵 Left border column
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: List.generate(30, (index) => buildBlueBox()),
                   ),
-                ),
+
+                  // Main content
+                  Expanded(
+                    child: Center(
+                      child: Text(
+                        "Inside Border",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ),
+                  ),
+
+                  // 🔵 Right border column
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: List.generate(30, (index) => buildBlueBox()),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ));
+            ),
+
+            // 🔵 Bottom border row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: List.generate(30, (index) => buildBlueBox()),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
