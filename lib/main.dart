@@ -23,45 +23,65 @@ class DashBoardScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text("Dashboard"),
         ),
-        body: Container(
-          color: Colors.pink,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                              width: 50,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                  color: Colors.blue,
-                                  border:
-                                      Border.all(width: 2, color: Colors.black),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      blurRadius: 55,
-                                      color: Colors.black,
-                                      spreadRadius: 2,
-                                    )
-                                  ],
-                                  shape: BoxShape.circle)),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
+        body: Row(
+          children: [
+            Expanded(
+              flex: 2,
+              child: Container(
+                width: 20,
+                height: 20,
+                color: Colors.pinkAccent,
               ),
-            ],
-          ),
+            ),
+            Expanded(
+              flex: 3,
+              child: Container(
+                width: 20,
+                height: 20,
+                color: Colors.brown,
+              ),
+            ),
+            Expanded(
+              flex: 4,
+              child: Container(
+                width: 20,
+                height: 20,
+                color: Colors.greenAccent,
+              ),
+            ),
+            Expanded(
+              flex: 5,
+              child: Container(
+                width: 20,
+                height: 20,
+                color: Colors.brown,
+              ),
+            ),
+            Expanded(
+              flex: 6,
+              child: Container(
+                width: 20,
+                height: 20,
+                color: Colors.yellowAccent,
+              ),
+            ),
+            Expanded(
+              flex: 7,
+              child: Container(
+                width: 20,
+                height: 20,
+                color: Colors.brown,
+              ),
+            ),
+            Expanded(
+              flex: 8,
+              child: Container(
+                width: 20,
+                height: 20,
+                color: Colors.purple,
+              ),
+            ),
+          ],
         ));
   }
 }
