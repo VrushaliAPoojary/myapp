@@ -23,9 +23,11 @@ class DashBoardScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text("Dashboard"),
         ),
-        body: Text(
-          "HELLO BRO WASSUP....hope you doing well",
-          style: TextStyle(fontFamily: 'Fontg'),
+        body: Center(
+          child: Text(
+            "HELLO BRO WASSUP....hope you doing well",
+            style: TextStyle(fontFamily: 'Fontg', fontWeight: FontWeight.w900),
+          ),
         ));
   }
 }
