@@ -23,65 +23,18 @@ class DashBoardScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text("Dashboard"),
         ),
-        body: Column(
-          children: [
-            Expanded(
-              flex: 2,
-              child: Container(
-                width: 20,
-                height: 20,
-                color: Colors.pinkAccent,
+        body: Center(
+          child: Container(
+            child: CircleAvatar(
+              child: Text(
+                'Name',
+                style: TextStyle(color: Colors.pink, fontSize: 22),
               ),
+              backgroundImage: AssetImage('assets/images/img_1.png'),
+              backgroundColor: Colors.pink,
+              maxRadius: 50,
             ),
-            Expanded(
-              flex: 3,
-              child: Container(
-                width: 20,
-                height: 20,
-                color: Colors.brown,
-              ),
-            ),
-            Expanded(
-              flex: 4,
-              child: Container(
-                width: 20,
-                height: 20,
-                color: Colors.greenAccent,
-              ),
-            ),
-            Expanded(
-              flex: 5,
-              child: Container(
-                width: 20,
-                height: 20,
-                color: Colors.brown,
-              ),
-            ),
-            Expanded(
-              flex: 6,
-              child: Container(
-                width: 20,
-                height: 20,
-                color: Colors.yellowAccent,
-              ),
-            ),
-            Expanded(
-              flex: 7,
-              child: Container(
-                width: 20,
-                height: 20,
-                color: Colors.brown,
-              ),
-            ),
-            Expanded(
-              flex: 8,
-              child: Container(
-                width: 20,
-                height: 20,
-                color: Colors.purple,
-              ),
-            ),
-          ],
+          ),
         ));
   }
 }
