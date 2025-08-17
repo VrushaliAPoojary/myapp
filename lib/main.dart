@@ -20,21 +20,28 @@ class DashBoardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Dashboard"),
-        ),
-        body: Center(
+      appBar: AppBar(
+        title: Text("Dashboard"),
+      ),
+      body: Center(
+        child: CircleAvatar(
           child: Container(
-            child: CircleAvatar(
-              child: Text(
-                'Name',
-                style: TextStyle(color: Colors.pink, fontSize: 22),
-              ),
-              backgroundImage: AssetImage('assets/images/img_1.png'),
-              backgroundColor: Colors.pink,
-              maxRadius: 50,
+            width: 60,
+            height: 60,
+            child: Column(
+              children: [
+                Container(
+                    width: 40,
+                    height: 30,
+                    child: Image.asset('assets/images/img_1.png')),
+                Text('Appu')
+              ],
             ),
           ),
-        ));
+          backgroundColor: Colors.pink,
+          maxRadius: 70,
+        ),
+      ),
+    );
   }
 }
