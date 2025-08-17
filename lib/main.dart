@@ -9,6 +9,7 @@ class learnflutter extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "flutter",
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
       home: DashBoardScreen(),
     );
@@ -24,6 +25,35 @@ class DashBoardScreen extends StatelessWidget {
         ),
         body: Container(
           color: Colors.pink,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                              width: 50,
+                              height: 50,
+                              decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(30)))),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ));
   }
 }
