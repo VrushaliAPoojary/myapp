@@ -24,3 +24,8 @@ flutter:
 
   assets:
     - assets/images/
+
+  fonts:
+    - family: Fontg
+      fonts:
+        - asset: assets/fonts/PlaywriteMXGuides-Regular.ttf
