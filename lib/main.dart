@@ -23,7 +23,7 @@ class DashBoardScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text("Dashboard"),
         ),
-        body: Row(
+        body: Column(
           children: [
             Expanded(
               flex: 2,
