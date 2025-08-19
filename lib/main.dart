@@ -13,28 +13,14 @@ class LearnFlutter extends StatelessWidget {
       title: "flutter",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.pink,
-        textTheme: const TextTheme(
-          displayLarge: TextStyle(
-            // replaces headline1
-            fontFamily: 'Fontg',
-            fontWeight: FontWeight.w900,
-            fontSize: 35,
-          ),
-          bodyLarge: TextStyle(
-            // replaces bodyText1
-            fontFamily: 'Fontg',
-            fontWeight: FontWeight.w700,
-            fontSize: 22,
-          ),
-          bodyMedium: TextStyle(
-            // replaces bodyText2
-            fontFamily: 'Fontg',
-            fontWeight: FontWeight.w400,
-            fontSize: 18,
-          ),
-        ),
-      ),
+          primarySwatch: Colors.pink,
+          textTheme: TextTheme(
+              headlineMedium:
+                  TextStyle(fontSize: 30, fontWeight: FontWeight.w900),
+              headlineSmall: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w300,
+                  fontStyle: FontStyle.italic))),
       home: const DashBoardScreen(),
     );
   }
@@ -51,14 +37,21 @@ class DashBoardScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text("hello world",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900)),
-          Text("hello world",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900)),
+          Text(
+            "hello world",
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          Text(
+            "hello world",
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
           Text("hello world",
               style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900)),
           Text("hello world",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900)),
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w300,
+                  fontStyle: FontStyle.italic)),
           Text("hello world",
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900)),
         ],
