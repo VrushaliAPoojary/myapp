@@ -49,29 +49,19 @@ class DashBoardScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Dashboard"),
       ),
-      body: Center(
-        child: Column(
-          children: [
-            Text(
-              "HELLO BRO WASSUP....hope you doing well",
-              style: Theme.of(context).textTheme.bodyLarge,
-            ),
-            Text(
-              "HELLO BRO WASSUP....hope you doing well",
-              style: Theme.of(context).textTheme.displayLarge,
-            ),
-            Text(
-              "HELLO BRO WASSUP....hope you doing well",
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            Text(
-              "HELLO BRO WASSUP....hope you doing well",
-              style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                    fontSize: 37,
-                  ),
-            ),
-          ],
-        ),
+      body: Column(
+        children: [
+          Text("hello world",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900)),
+          Text("hello world",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900)),
+          Text("hello world",
+              style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900)),
+          Text("hello world",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900)),
+          Text("hello world",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900)),
+        ],
       ),
     );
   }
