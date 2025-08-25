@@ -39,7 +39,10 @@ class DashBoardScreen extends StatelessWidget {
         children: [
           Text(
             "hello world",
-            style: Theme.of(context).textTheme.headlineMedium,
+            style: Theme.of(context)
+                .textTheme
+                .headlineMedium!
+                .copyWith(color: Colors.yellowAccent),
           ),
           Text(
             "hello world",
