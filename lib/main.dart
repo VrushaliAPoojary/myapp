@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learnflutter/uihelper/util.dart';
 
 void main() {
   runApp(const LearnFlutter());
@@ -55,8 +56,10 @@ class DashBoardScreen extends StatelessWidget {
                   fontSize: 30,
                   fontWeight: FontWeight.w300,
                   fontStyle: FontStyle.italic)),
-          Text("hello world",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900)),
+          Text(
+            "hello world",
+            style: mTextstyle1(),
+          ),
         ],
       ),
     );
