@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learnflutter/uihelper/util.dart';
 
 void main() {
   runApp(const LearnFlutter());
@@ -33,35 +32,20 @@ class DashBoardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Dashboard"),
-      ),
-      body: Column(
-        children: [
-          Text(
-            "hello world",
-            style: Theme.of(context)
-                .textTheme
-                .headlineMedium!
-                .copyWith(color: Colors.yellowAccent),
-          ),
-          Text(
-            "hello world",
-            style: Theme.of(context).textTheme.headlineSmall,
-          ),
-          Text("hello world",
-              style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900)),
-          Text("hello world",
-              style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w300,
-                  fontStyle: FontStyle.italic)),
-          Text(
-            "hello world",
-            style: mTextstyle1(),
-          ),
-        ],
-      ),
-    );
+        appBar: AppBar(
+          title: const Text("Dashboard"),
+        ),
+        body: Center(
+          child: Card(
+              shadowColor: Colors.pink,
+              elevation: 25,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  "hisiis",
+                  style: TextStyle(fontSize: 33),
+                ),
+              )),
+        ));
   }
 }
