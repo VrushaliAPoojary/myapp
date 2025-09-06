@@ -47,16 +47,32 @@ class DashBoardScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
+                enabled: true,
                 decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.pink, width: 2),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.pink, width: 1),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.pink, width: 2),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.pink, width: 1),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    disabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black, width: 1),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    suffixText: "user name exist",
+                    suffixIcon: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.remove_red_eye,
+                        color: Colors.blue,
+                      ),
+                    ),
+                    prefixIcon: Icon(
+                      Icons.email,
+                      color: Colors.yellowAccent,
+                    )),
               ),
               const SizedBox(height: 11),
               TextField(
