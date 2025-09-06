@@ -31,8 +31,23 @@ class LearnFlutter extends StatelessWidget {
   }
 }
 
-class DashBoardScreen extends StatelessWidget {
+class DashBoardScreen extends StatefulWidget {
   const DashBoardScreen({super.key});
+
+  @override
+  State<DashBoardScreen> createState() => _DashBoardScreenState();
+}
+
+class _DashBoardScreenState extends State<DashBoardScreen> {
+  final emailText = TextEditingController();
+  final password = TextEditingController();
+
+  @override
+  void dispose() {
+    emailText.dispose();
+    password.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -47,35 +62,40 @@ class DashBoardScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
+                controller: emailText,
                 enabled: true,
                 decoration: InputDecoration(
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.pink, width: 2),
-                      borderRadius: BorderRadius.circular(5),
+                  hintText: "enter email",
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.pink, width: 2),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.pink, width: 1),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  disabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black, width: 1),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  suffixIcon: IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.remove_red_eye,
+                      color: Colors.blue,
                     ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.pink, width: 1),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    disabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black, width: 1),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    suffixText: "user name exist",
-                    suffixIcon: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.remove_red_eye,
-                        color: Colors.blue,
-                      ),
-                    ),
-                    prefixIcon: Icon(
-                      Icons.email,
-                      color: Colors.yellowAccent,
-                    )),
+                  ),
+                  prefixIcon: Icon(
+                    Icons.email,
+                    color: Colors.yellowAccent,
+                  ),
+                ),
               ),
               const SizedBox(height: 11),
               TextField(
+                controller: password,
+                obscureText: true,
+                obscuringCharacter: "*",
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.pink),
@@ -83,6 +103,14 @@ class DashBoardScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  String uEmail = emailText.text.toString();
+                  String uPass = password.text;
+                  print("email: $uEmail, Pass:$uPass");
+                },
+                child: Text('Login'),
+              )
             ],
           ),
         ),
