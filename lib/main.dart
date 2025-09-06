@@ -62,6 +62,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
+                keyboardType: TextInputType.number,
                 controller: emailText,
                 enabled: true,
                 decoration: InputDecoration(
