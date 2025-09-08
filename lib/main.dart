@@ -1,119 +1,65 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const LearnFlutter());
+  runApp(const MyApp());
 }
 
-class LearnFlutter extends StatelessWidget {
-  const LearnFlutter({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "flutter",
       debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.pink,
-        textTheme: const TextTheme(
-          headlineMedium: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.w900,
-          ),
-          headlineSmall: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.w300,
-            fontStyle: FontStyle.italic,
-          ),
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
-      home: const DashBoardScreen(),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class DashBoardScreen extends StatefulWidget {
-  const DashBoardScreen({super.key});
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
 
   @override
-  State<DashBoardScreen> createState() => _DashBoardScreenState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _DashBoardScreenState extends State<DashBoardScreen> {
-  final emailText = TextEditingController();
-  final password = TextEditingController();
-
-  @override
-  void dispose() {
-    emailText.dispose();
-    password.dispose();
-    super.dispose();
-  }
-
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Dashboard"),
+        title: Text('hello'),
       ),
       body: Center(
-        child: Container(
-          width: 300,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextField(
-                keyboardType: TextInputType.number,
-                controller: emailText,
-                enabled: true,
-                decoration: InputDecoration(
-                  hintText: "enter email",
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.pink, width: 2),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.pink, width: 1),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  disabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black, width: 1),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  suffixIcon: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.remove_red_eye,
-                      color: Colors.blue,
-                    ),
-                  ),
-                  prefixIcon: Icon(
-                    Icons.email,
-                    color: Colors.yellowAccent,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 11),
-              TextField(
-                controller: password,
-                obscureText: true,
-                obscuringCharacter: "*",
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.pink),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                ),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  String uEmail = emailText.text.toString();
-                  String uPass = password.text;
-                  print("email: $uEmail, Pass:$uPass");
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'select data',
+              style: TextStyle(fontSize: 25),
+            ),
+            ElevatedButton(
+                onPressed: () async {
+                  DateTime? datePicked = await showDatePicker(
+                    context: context,
+                    initialDate: DateTime.now(),
+                    firstDate: DateTime(2024),
+                    lastDate: DateTime(2025, 12, 31), // December 31st, 2025
+                  );
+                  if (datePicked != null) {
+                    print(
+                        'Date selected : ${datePicked.day}-${datePicked.month}-${datePicked.year}');
+                  }
                 },
-                child: Text('Login'),
-              )
-            ],
-          ),
+                child: Text('show'))
+          ],
         ),
       ),
     );
