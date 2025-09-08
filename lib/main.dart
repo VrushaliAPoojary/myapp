@@ -58,7 +58,19 @@ class _MyHomePageState extends State<MyHomePage> {
                         'Date selected : ${datePicked.day}-${datePicked.month}-${datePicked.year}');
                   }
                 },
-                child: Text('show'))
+                child: Text('show')),
+            ElevatedButton(
+                onPressed: () async {
+                  TimeOfDay? pickedTime = await showTimePicker(
+                      context: context,
+                      initialTime: TimeOfDay.now(),
+                      initialEntryMode: TimePickerEntryMode.input);
+                  if (pickedTime != null) {
+                    print(
+                        'Time selected: ${pickedTime.hour}: ${pickedTime.minute}');
+                  }
+                },
+                child: Text('Select Time'))
           ],
         ),
       ),
