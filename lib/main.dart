@@ -33,47 +33,62 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var arrColors = [
+      Colors.amber,
+      Colors.pink,
+      Colors.yellow,
+      Colors.orange,
+      Colors.green,
+      Colors.red,
+      Colors.black
+    ];
     return Scaffold(
-      appBar: AppBar(
-        title: Text('hello'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'select data',
-              style: TextStyle(fontSize: 25),
-            ),
-            ElevatedButton(
-                onPressed: () async {
-                  DateTime? datePicked = await showDatePicker(
-                    context: context,
-                    initialDate: DateTime.now(),
-                    firstDate: DateTime(2024),
-                    lastDate: DateTime(2025, 12, 31), // December 31st, 2025
-                  );
-                  if (datePicked != null) {
-                    print(
-                        'Date selected : ${datePicked.day}-${datePicked.month}-${datePicked.year}');
-                  }
-                },
-                child: Text('show')),
-            ElevatedButton(
-                onPressed: () async {
-                  TimeOfDay? pickedTime = await showTimePicker(
-                      context: context,
-                      initialTime: TimeOfDay.now(),
-                      initialEntryMode: TimePickerEntryMode.input);
-                  if (pickedTime != null) {
-                    print(
-                        'Time selected: ${pickedTime.hour}: ${pickedTime.minute}');
-                  }
-                },
-                child: Text('Select Time'))
-          ],
+        appBar: AppBar(
+          title: Text('hello'),
         ),
-      ),
-    );
+        body: Container(
+          width: 200,
+          child: GridView.count(
+            crossAxisCount: 3,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: arrColors[0],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: arrColors[1],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: arrColors[2],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: arrColors[3],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: arrColors[4],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  color: arrColors[5],
+                ),
+              )
+            ],
+          ),
+        ));
   }
 }
