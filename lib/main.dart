@@ -43,52 +43,42 @@ class _MyHomePageState extends State<MyHomePage> {
       Colors.black
     ];
     return Scaffold(
-        appBar: AppBar(
-          title: Text('hello'),
-        ),
-        body: Container(
-          width: 200,
-          child: GridView.count(
-            crossAxisCount: 3,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: arrColors[0],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: arrColors[1],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: arrColors[2],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: arrColors[3],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: arrColors[4],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  color: arrColors[5],
-                ),
-              )
-            ],
+      appBar: AppBar(
+        title: const Text('hello'),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: GridView.count(
+              crossAxisCount: 4,
+              crossAxisSpacing: 11,
+              mainAxisSpacing: 11,
+              children: [
+                Container(color: arrColors[0]),
+                Container(color: arrColors[1]),
+                Container(color: arrColors[2]),
+                Container(color: arrColors[3]),
+                Container(color: arrColors[4]),
+                Container(color: arrColors[5]),
+              ],
+            ),
           ),
-        ));
+          const SizedBox(height: 100),
+          Expanded(
+            child: GridView.extent(
+              maxCrossAxisExtent: 100,
+              children: [
+                Container(color: arrColors[0]),
+                Container(color: arrColors[1]),
+                Container(color: arrColors[2]),
+                Container(color: arrColors[3]),
+                Container(color: arrColors[4]),
+                Container(color: arrColors[5]),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
